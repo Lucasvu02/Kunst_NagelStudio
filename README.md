@@ -31,8 +31,8 @@ source sleekenv/bin/activate
 pip install django gunicorn psycopg2-binary pillow
 4. Setup Django project
 
-git clone https://github.com/thaisung/vinh_vu_wix.git
-cd sleeksoft/
+Upload or clone your Django project source code into /home/sleekproject/sleeksoft/ (or your chosen folder).
+Inside the project folder, run:
 python3 manage.py makemigrations && python3 manage.py migrate
 python3 manage.py createsuperuser
 python3 manage.py collectstatic
@@ -43,7 +43,7 @@ gunicorn --bind 0.0.0.0:8000 sleeksoft.wsgi
 deactivate
 5. Configure Gunicorn systemd service and socket
 
-Create /etc/systemd/system/gunicorn.socket and /etc/systemd/system/gunicorn.service with proper configs (as provided). Then:
+Create /etc/systemd/system/gunicorn.socket and /etc/systemd/system/gunicorn.service with appropriate configs, then:
 
 sudo systemctl start gunicorn.socket
 sudo systemctl enable gunicorn.socket
