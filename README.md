@@ -1,4 +1,4 @@
-Deploying Website kunstnagelstudionail.online on Ubuntu VPS
+Deploying Website https://kunstnagelstudionail.online on Ubuntu VPS
 
 Preparation
 
